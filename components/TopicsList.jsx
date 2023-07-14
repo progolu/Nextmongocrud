@@ -4,7 +4,7 @@ import { HiPencilAlt } from "react-icons/hi";
 
 const getTopics = async () => {
   try {
-    const res = await fetch("http://mongo.becaaplus.com/api/topics", {
+    const res = await fetch("/api/topics", {
       cache: "no-store",
     });
 

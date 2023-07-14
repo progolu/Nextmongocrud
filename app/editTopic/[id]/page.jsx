@@ -2,7 +2,7 @@ import EditTopicForm from "@/components/EditTopicForm";
 
 const getTopicById = async (id) => {
   try {
-    const res = await fetch(`http://mongo.becaaplus.com/api/topics/${id}`, {
+    const res = await fetch(`/api/topics/${id}`, {
       cache: "no-store",
     });
 
