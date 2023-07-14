@@ -1,10 +1,8 @@
-import Link from "next/link";
-import RemoveBtn from "./RemoveBtn";
-import { HiPencilAlt } from "react-icons/hi";
+//import { useState } from 'react';
 
 const getTopics = async () => {
   try {
-    const res = await fetch("api/topics", {
+    const res = await fetch(`https://nextjs-api-rho.vercel.app/api/workout`, {
       cache: "no-store",
     });
 
@@ -18,7 +16,7 @@ const getTopics = async () => {
   }
 };
 
-export default async function TopicsList() {
+export default async function Workout() {
 
   const { topics } = await getTopics();
 
@@ -31,14 +29,7 @@ export default async function TopicsList() {
         >
           <div>
             <h2 className="font-bold text-2xl">{t.title}</h2>
-            <div>{t.description}</div>
-          </div>
-
-          <div className="flex gap-2">
-            <RemoveBtn id={t._id} />
-            <Link href={`/editTopic/${t._id}`}>
-              <HiPencilAlt size={24} />
-            </Link>
+            <div>{t.reps}</div>
           </div>
         </div>
       ))}

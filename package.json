@@ -2,14 +2,15 @@
   "name": "mongocrud",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mongo.becaaplus.com",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
+    "cors": "^2.8.5",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "mongoose": "^7.3.3",
