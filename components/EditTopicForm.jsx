@@ -13,7 +13,7 @@ export default function EditTopicForm({ id, title, description }) {
     e.preventDefault();
 
     try {
-      const res = await fetch(`http://localhost:3001/api/topics/${id}`, {
+      const res = await fetch(`http://mongo.becaaplus.com/api/topics/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",
