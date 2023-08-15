@@ -2,7 +2,7 @@
 
 const getTopics = async () => {
   try {
-    const res = await fetch(`https://nextjs-api-rho.vercel.app/api/workout`, {
+    const res = await fetch(`/api/workout`, {
       cache: "no-store",
     });
 

@@ -2,7 +2,8 @@ const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
 
-const dev = process.env.NEXT_PUBLIC_MY_LOCALHOST !== 'production'
+const dev = process.env.NODE_ENV !== 'production'
+//const dev = process.env.NEXT_PUBLIC_MY_LOCALHOST !== 'production'
 const hostname = 'localhost'
 //const hostname =  process.env.NEXT_PUBLIC_MY_LOCALHOST !== "production" ? 'localhost' : process.env.NODE_ENV
 //const hostname =  process.env.NEXT_PUBLIC_MY_LOCALHOST !== "production" ? 'localhost' : 'mongoapp.becaaplus.com'
