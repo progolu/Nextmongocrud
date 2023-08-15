@@ -13,7 +13,7 @@ export default function EditTopicForm({ id, title, description }) {
     e.preventDefault();
 
     try {
-      const res = await fetch(`/api/topics/${id}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_MY_LOCALHOST}/api/topics/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",
@@ -26,7 +26,7 @@ export default function EditTopicForm({ id, title, description }) {
       }
 
       router.refresh();
-      router.push("/");
+      router.push(`${process.env.NEXT_PUBLIC_MY_LOCALHOST}`);
     } catch (error) {
       console.log(error);
     }

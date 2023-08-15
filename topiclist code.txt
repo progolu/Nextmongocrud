@@ -1,11 +1,9 @@
-import clientPromise from "../libs/mongodb";
-
 import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
 import { HiPencilAlt } from "react-icons/hi";
 
 
-export const getTopics = async () => {
+const getTopics = async () => {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_MY_LOCALHOST}/api/topics`, {
       cache: "no-store",
@@ -21,40 +19,9 @@ export const getTopics = async () => {
   }
 };
 
-// export async function getServerSideProps() {
-//   // Fetch data from external API
-//   // const res = await fetch(`https://.../data`)
-//   const res = await fetch(`${process.env.NEXT_PUBLIC_MY_LOCALHOST}/api/topics`, {
-//     cache: "no-store",
-//   });
-//   //const topics = await res.json()
-
-//   // Pass data to the page via props
-//   return { props: { topics } }
-// }
-
-// export async function getServerSideProps() {
-//   try {
-//       const client = await clientPromise;
-//       const db = client.db("test");
-
-//       const topics = await db
-//           .collection("topics")
-//           .find({})
-//           .toArray();
-
-//       return {
-//           props: { topics: JSON.parse(JSON.stringify(topics)) },
-//       };
-//   } catch (e) {
-//       console.error(e);
-//   }
-// }
-
 export default async function TopicsList() {
 
   const { topics } = await getTopics();
-  //const { topics } = await getServerSideProps();
 
   return (
     <>

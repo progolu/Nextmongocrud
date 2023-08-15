@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build && next export",
-    "start": "NODE_ENV=production node server.js",
+    "start": "NEXT_PUBLIC_NODE_ENV=production node server.js",
     "lint": "next lint"
   },
   "dependencies": {

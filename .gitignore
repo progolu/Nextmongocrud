@@ -16,6 +16,9 @@
 /build
 node_modules
 .env
+#topiclist another
+#topiclist code
+#package
 # misc
 .DS_Store
 *.pem

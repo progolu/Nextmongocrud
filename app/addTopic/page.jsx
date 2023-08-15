@@ -18,7 +18,7 @@ export default function AddTopic() {
     }
 
     try {
-      const res = await fetch("/api/topics", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_MY_LOCALHOST}/api/topics`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -27,7 +27,7 @@ export default function AddTopic() {
       });
 
       if (res.ok) {
-        router.push("/");
+        router.push(`${process.env.NEXT_PUBLIC_MY_LOCALHOST}`);
       } else {
         throw new Error("Failed to create a topic");
       }
