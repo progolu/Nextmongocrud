@@ -2,10 +2,10 @@ const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
 
-const dev = process.env.NODE_ENV !== 'production'
-//const dev = process.env.NEXT_PUBLIC_MY_LOCALHOST !== 'production'
-const hostname = 'localhost'
-//const hostname =  process.env.NEXT_PUBLIC_MY_LOCALHOST !== "production" ? 'localhost' : process.env.NODE_ENV
+//const dev = process.env.NODE_ENV !== 'production'
+const dev = process.env.NEXT_PUBLIC_MY_LOCALHOST !== 'production'
+//const hostname = 'localhost'
+const hostname =  process.env.NEXT_PUBLIC_MY_LOCALHOST !== "production" ? 'localhost' : becaap.com
 //const hostname =  process.env.NEXT_PUBLIC_MY_LOCALHOST !== "production" ? 'localhost' : 'mongoapp.becaaplus.com'
 const port = process.env.PORT || 3000
 // when using middleware `hostname` and `port` must be provided below

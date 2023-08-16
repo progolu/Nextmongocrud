@@ -15,7 +15,7 @@
 # production
 /build
 node_modules
-.env
+#.env
 #topiclist another
 #topiclist code
 #package
